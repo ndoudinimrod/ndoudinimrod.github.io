@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ndoudi Nimrod — Portfolio</title>
+  <meta name="description" content="Portfolio de Ndoudi Nimrod — Cybersecurity | IT Risk & Audit">
+  <style>
+    :root{
+      --bg:#0b0f12; --card:#0f1518; --muted:#9aa6af; --accent:#00d4ff; --glass: rgba(255,255,255,0.03);
+      --radius:14px; --gap:18px; --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:linear-gradient(180deg,#071017 0%, #081219 60%);color:#e6eef3;display:flex;align-items:center;justify-content:center;padding:32px}
+    .wrap{width:100%;max-width:var(--maxw);}
+
+    header{display:flex;gap:18px;align-items:center;margin-bottom:26px}
+    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7b61ff);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#031018;flex:0 0 96px}
+    .hero{flex:1}
+    h1{margin:0;font-size:24px;letter-spacing:0.2px}
+    .subtitle{color:var(--muted);margin-top:6px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:var(--gap);align-items:start}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .avatar{width:80px;height:80px}}
+
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 20px rgba(2,6,8,0.6);}
+    .card.transparent{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .section-title h2{margin:0;font-size:16px}
+    .section-title a{color:var(--accent);font-size:13px;text-decoration:none}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:700px){.projects{grid-template-columns:1fr}}
+    .project{padding:12px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 8px 0;font-size:15px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+    .project .meta{margin-top:10px;display:flex;gap:8px;align-items:center}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .proj-links{margin-left:auto}
+    .proj-links a{color:var(--accent);text-decoration:none;font-size:13px}
+
+    /* Right column */
+    .side .info-row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);font-size:13px}
+
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .tl-item{display:flex;gap:12px}
+    .tl-item .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);flex:0 0 12px;margin-top:6px}
+    .tl-item .tl-content h4{margin:0;font-size:14px}
+    .tl-item .tl-content p{margin:4px 0 0 0;color:var(--muted);font-size:13px}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* top nav for small screens */
+    .topbar{display:none;position:fixed;left:0;right:0;top:0;padding:10px 18px;background:rgba(3,6,8,0.6);backdrop-filter:blur(6px);z-index:40}
+    @media (max-width:560px){.topbar{display:flex;justify-content:space-between;align-items:center}} 
+
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7b61ff);color:#031018;text-decoration:none;font-weight:600}
+
+  </style>
+</head>
+<body>
+  <div class="topbar card transparent">
+    <div style="font-weight:700">Ndoudi Nimrod</div>
+    <a href="#contact" class="cta">Contact</a>
+  </div>
+
+  <main class="wrap">
+    <header>
+      <div class="avatar">NN</div>
+      <div class="hero">
+        <h1>Ndoudi Nimrod — Cybersecurity Analyst | IT Risk & Audit</h1>
+        <div class="subtitle">Ingénieur ESIEA • Expérience en sécurité réseau (Groupe BPCE) & audit IT (EY). Passionné par l'architecture cloud sécurisée, l'automatisation et la conformité.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+        <a class="cta" href="#projects">Voir mes projets</a>
+        <a style="color:var(--muted);font-size:13px;text-decoration:none" href="#contact">your.email@domain.com</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div>
+        <section id="projects" class="card">
+          <div class="section-title">
+            <h2>Projets récents</h2>
+            <a href="#">Voir tout</a>
+          </div>
+
+          <div class="projects">
+            <article class="project">
+              <h3>Network Security API — Groupe BPCE (Stage 2022)</h3>
+              <p>Déploiement d'une API REST sur AWS (Python, SQL) pour collecter et analyser des configurations VPC & Security Group. Fourniture de dashboards et rapports pour l'équipe sécurité.</p>
+              <div class="meta">
+                <span class="tag">Python</span>
+                <span class="tag">AWS</span>
+                <span class="tag">VPC</span>
+                <div class="proj-links"><a href="#">GitHub →</a></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>Audit & Reporting — EY (Audit IT)</h3>
+              <p>Automatisation de contrôles et rédaction de livrables techniques en anglais pour des parties prenantes internationales. Tests d'implémentation et recommandations remédiation.</p>
+              <div class="meta">
+                <span class="tag">Audit</span>
+                <span class="tag">Documentation</span>
+                <div class="proj-links"><a href="#">Détails →</a></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>CV & Lettre Auto-Generator</h3>
+              <p>Script de génération dynamique de CV et lettre de motivation (prototypes Streamlit & Flask). Permet d'exporter en Word / PDF sans dépendre de MS Word COM.</p>
+              <div class="meta">
+                <span class="tag">Python</span>
+                <span class="tag">Streamlit</span>
+                <div class="proj-links"><a href="#">Code →</a></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <h3>Lab Kali & Outillage (Ubuntu 24.04)</h3>
+              <p>Catalogue d'outils par défaut Kali, scripts et tutoriels pour usage sur Ubuntu 24.04 — préparation d'atelier interne et documentation pas à pas.</p>
+              <div class="meta">
+                <span class="tag">Kali</span>
+                <span class="tag">Linux</span>
+                <div class="proj-links"><a href="#">Guide →</a></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section id="experience" class="card" style="margin-top:16px">
+          <div class="section-title"><h2>Formation & Expériences</h2><a href="#">Télécharger CV</a></div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="dot"></div>
+              <div class="tl-content"><h4>ESIEA — Diplôme d'ingénieur</h4><p>Formation spécialisée en systèmes & cybersécurité.</p></div>
+            </div>
+
+            <div class="tl-item">
+              <div class="dot"></div>
+              <div class="tl-content"><h4>Groupe BPCE — Stagiaire Ingénieur sécurité réseau (2022)</h4><p>API REST sur AWS pour collecter infos de sécurité réseau, présentations techniques en anglais.</p></div>
+            </div>
+
+            <div class="tl-item">
+              <div class="dot"></div>
+              <div class="tl-content"><h4>EY — Audit IT</h4><p>Missions d'audit IT, rédaction de rapports et automatisation de contrôles.</p></div>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="about" class="card" style="margin-top:16px">
+          <div class="section-title"><h2>À propos</h2><a href="#contact">Me contacter</a></div>
+          <p style="color:var(--muted);line-height:1.6">Ingénieur issu de l'ESIEA, j'ai travaillé sur des sujets de sécurité réseau et d'audit IT. J'aime construire des solutions automatisées et reproductibles — de l'API cloud au script d'analyse — et je cible des postes en IT Risk / Cybersecurity (trainee / junior) avec un objectif de long terme : devenir RSSI.</p>
+        </section>
+
+      </div>
+
+      <aside class="side">
+        <div class="card transparent">
+          <div class="section-title"><h2>Contact</h2><a href="#contact">Contact</a></div>
+          <div class="info-row"><strong>Ndoudi Nimrod</strong></div>
+          <div class="info-row"><span class="muted">Email</span><div style="margin-left:auto;color:var(--accent)">your.email@domain.com</div></div>
+          <div class="info-row"><span class="muted">GitHub</span><div style="margin-left:auto;color:var(--accent)"><a href="#" style="color:var(--accent)">github.com/tonprofil</a></div></div>
+          <div class="info-row"><span class="muted">LinkedIn</span><div style="margin-left:auto;color:var(--accent)"><a href="#" style="color:var(--accent)">linkedin.com/in/tonprofil</a></div></div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title"><h2>Compétences</h2><a href="#">Tech</a></div>
+          <div class="skill-list" style="margin-top:8px">
+            <div class="skill">Python</div>
+            <div class="skill">AWS (EC2, VPC)</div>
+            <div class="skill">Linux</div>
+            <div class="skill">Audit IT</div>
+            <div class="skill">Sécurité réseau</div>
+            <div class="skill">Streamlit / Flask</div>
+            <div class="skill">Documentation technique</div>
+          </div>
+        </div>
+
+        <div class="card transparent" style="margin-top:12px">
+          <h3 style="margin:0 0 10px 0">Langues</h3>
+          <p style="margin:0;color:var(--muted)">Français (natif), Anglais (professionnel)</p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 style="margin:0 0 10px 0">Objectif</h3>
+          <p style="margin:0;color:var(--muted)">Rejoindre l'Inspection Générale ou évoluer vers un poste de RSSI adjoint après un Graduate Program en IT Risk / CyberSecurity.</p>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div>© Ndoudi Nimrod — Portfolio • Construit avec HTML/CSS • Modifiable</div>
+    </footer>
+  </main>
+
+  <script>
+    // small helper: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth',block:'start'})})})
+  </script>
+</body>
+</html>
